@@ -8,25 +8,29 @@
  *  - http://www.gnu.org/copyleft/gpl.html
  *
  * Author: Mark J Panaghiston
- * Version: 2.3.2
- * Date: 14th May 2013
+ * Version: 2.3.0
+ * Date: 20th April 2013
+ * 
+ * Revision: 20th May 2013
+ * 
+ * Changes by Nuria Ruiz to make player work on zepto
+ *  
+ *  Please see README for description of changes as player as is will only work
+ *  with zepto, not jquery. Changes are done for jPlyer team to evaluate
+ *  how do they want to proceed.
+ *
+ *  
+ *
+ *
  */
 
 /* Code verified using http://www.jshint.com/ */
 /*jshint asi:false, bitwise:false, boss:false, browser:true, curly:true, debug:false, eqeqeq:true, eqnull:false, evil:false, forin:false, immed:false, jquery:true, laxbreak:false, newcap:true, noarg:true, noempty:true, nonew:true, onevar:false, passfail:false, plusplus:false, regexp:false, undef:true, sub:false, strict:false, white:false, smarttabs:true */
 /*global define:false, ActiveXObject:false, alert:false */
 
-(function (root, factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as an anonymous module.
-		define(['jquery'], factory);
-	} else {
-		// Browser globals
-		factory(root.jQuery);
-	}
-}(this, function ($, undefined) {
 
-	// Adapted from jquery.ui.widget.js (1.8.7): $.widget.bridge
+ (function ($) {
+	
 	$.fn.jPlayer = function( options ) {
 		var name = "jPlayer";
 		var isMethodCall = typeof options === "string",
@@ -45,7 +49,7 @@
 
 		if ( isMethodCall ) {
 			this.each(function() {
-				var instance = $.data( this, name ),
+				var instance = $(this).data( name ),
 					methodValue = instance && $.isFunction( instance[options] ) ?
 						instance[ options ].apply( instance, args ) :
 						instance;
@@ -56,12 +60,12 @@
 			});
 		} else {
 			this.each(function() {
-				var instance = $.data( this, name );
+				var instance = $(this).data( name );
 				if ( instance ) {
 					// instance.option( options || {} )._init(); // Orig jquery.ui.widget.js code: Not recommend for jPlayer. ie., Applying new options to an existing instance (via the jPlayer constructor) and performing the _init(). The _init() is what concerns me. It would leave a lot of event handlers acting on jPlayer instance and the interface.
 					instance.option( options || {} ); // The new constructor only changes the options. Changing options only has basic support atm.
 				} else {
-					$.data( this, name, new $.jPlayer( options, this ) );
+					$(this).data(  name, new $.jPlayer( options, this ) );
 				}
 			});
 		}
@@ -899,7 +903,7 @@
 				this.html.video.available = !!this.htmlElement.video.canPlayType && this._testCanPlayType(this.htmlElement.video); // Test is for IE9 on Win Server 2008.
 			}
 
-			this.flash.available = this._checkForFlash(10.1);
+			this.flash.available = this._checkForFlash(10.1); 
 
 			this.html.canPlay = {};
 			this.flash.canPlay = {};
@@ -2815,4 +2819,4 @@
 		CSS_SELECTOR_STRING: "Check your css selector is a string.",
 		OPTION_KEY: "Check your option name."
 	};
-}));
+})(Zepto);
