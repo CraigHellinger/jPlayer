@@ -22,11 +22,12 @@ To use
 ------
 
 There is plenty information on teh jplayer site on how to get it working, same pplies here
-other than where it says to load juqery first you should load zepto first
+other than where it says to load jquery first you should load zepto first
 
+```html
 <script type="text/javascript" src="zepto.js"></script>
 <script src="jquery.jplayer.js"></script>
-
+```
 
 Original readme of jPlayer follows
 ---------------------------------------------------
