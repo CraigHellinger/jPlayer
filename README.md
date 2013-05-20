@@ -2,7 +2,7 @@
 http://www.jplayer.org/
 
 
-Changes so jPlayer (audio) works with zepto. Addition of 1 skin.
+Changes so jPlayer (audio) works with zepto. Added  1 skin.
 ------------------------------------------------------------
 
 * We have changed initialization, so the whole player is initialized in the
@@ -15,7 +15,17 @@ Changes so jPlayer (audio) works with zepto. Addition of 1 skin.
   so player does not work under jquery now. It requires zepto-1.0 compiled with the
   optional data module.
 
-* We have also added 1 skin.
+* We have also added 1 skin called slim.
+
+
+To use
+------
+
+There is plenty information on teh jplayer site on how to get it working, same pplies here
+other than where it says to load juqery first you should load zepto first
+
+<script type="text/javascript" src="zepto.js"></script>
+<script src="jquery.jplayer.js"></script>
 
 
 Original readme of jPlayer follows
