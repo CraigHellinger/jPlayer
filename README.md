@@ -1,11 +1,12 @@
 
 http://www.jplayer.org/
 
-Changes so jPlayer (for audio) works with zepto plus addition of 1 skin.
+
+Changes so jPlayer (audio) works with zepto. Addition of 1 skin.
 ------------------------------------------------------------
 
 * We have changed initialization, so the whole player is initialized in the
-* Zepto callback.
+  Zepto callback.
 
 * We have changed calls to data module, they are of the form $.data(this, <something>) on jquery
   and of the form $(this).data(<something>) on zepto.
