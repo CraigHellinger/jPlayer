@@ -1,21 +1,20 @@
-jPlayer : HTML5 Audio & Video for jQuery
 
 http://www.jplayer.org/
 
-Changes so jPlayer works with zepto plus addition of 1 skin.
+Changes so jPlayer (for audio) works with zepto plus addition of 1 skin.
+------------------------------------------------------------
 
-	* We have changed initialization, so the whole player is initialized in the Zepto callback
+* We have changed initialization, so the whole player is initialized in the
+* Zepto callback.
 
-	* We have changed calls to data module, they are of the form $.data(this, <something>) on jquery
-	  and of the form $(this).data(<something>) on zepto
+* We have changed calls to data module, they are of the form $.data(this, <something>) on jquery
+  and of the form $(this).data(<something>) on zepto.
 
-	* Note that the initialization for zepto and jquery is different 
-	  so player does not work under jquery now. It requires zepto-1.0 compiled with the
-	  optional data module.
+* Note that the initialization for zepto and jquery is different 
+  so player does not work under jquery now. It requires zepto-1.0 compiled with the
+  optional data module.
 
-	* We have also added 1 skin.
-
-
+* We have also added 1 skin.
 
 
 Original readme of jPlayer follows
