@@ -1,0 +1,204 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Slim
+ *
+ * Copyright (c) 2010-2012 Tuenti
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: May Allidem
+ * Skin Version: 4.3 (jPlayer 2.2.0)
+ * Date: 20th May 2013
+ */
+
+.jp-audio {
+	font-family: "Helvetica Neue", Helvetica, Arial normal;
+	font-size: .8em;
+	line-height: 1.6;
+	color: rgb(133, 133, 133);
+}
+.jp-audio {}
+	.jp-interface {
+		position: relative;
+		width:100%;
+		border-radius: 4px;
+	}
+
+/* @group CONTROLS */
+.jp-controls-holder {
+	clear: both;
+	width:440px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	top:-8px;
+}
+.jp-interface .jp-controls {
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+}
+.jp-audio .jp-controls {
+	float: right;
+}
+.jp-interface .jp-controls li {
+	display:inline;
+	float: right;
+}
+
+.jp-interface .jp-controls a {
+	display:block;
+	overflow:hidden;
+}
+.jp-group {}
+	.jp-group-controls {
+		margin-right: 85px;
+		padding: 28px 26px 34px;
+		background: rgb(245, 245, 245);
+		border-radius: 4px;
+	}
+.jp-play,
+.jp-pause {
+	padding: 12px 15px 10px; 
+
+	position: relative;
+	font-size: 11px;
+	color: #616161;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+
+	border-color: #097db1 #0b6690 #097db1;
+	background: #1098d3;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1098d3',endColorstr='#077cb1',GradientType=0);
+	background: -webkit-linear-gradient(#1098d3,#077cb1);
+	background: -moz-linear-gradient(#1098d3,#077cb1);
+	background: linear-gradient(#1098d3,#077cb1);
+
+	border-radius: 4px;
+}
+.jp-play i,
+.jp-pause i {
+	height: 30px;
+	width: 30px;
+	background: url(jp-icons.png) no-repeat top left transparent;
+	display: block;
+	margin: 5px;
+}
+	.jp-play .i-jp-play   { background-position: -34px 0px; }
+	.jp-pause .i-jp-pause { background-position: -66px 0; }
+
+	.jp-play:hover,
+	.jp-pause:hover {
+		border-color: #0f79a3 #0f79a3 #0f6383;
+		background: #118cbd;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DA5DB',endColorstr='#0F87BA',GradientType=0);
+		background: -webkit-linear-gradient(#1da5db,#0f87ba);
+		background: -moz-linear-gradient(#1da5db,#0f87ba);
+		background: linear-gradient(#1da5db,#0f87ba);
+	}
+	.jp-pause {
+		display: none;
+	} /* Tiene que estar aqui, sino no aparece */
+
+/* @group progress bar */
+.jp-progress {
+	/*overflow:hidden;*/
+	background-color: #ddd;
+}
+.jp-audio .jp-progress { height: 8px; }
+	.jp-audio .jp-type-single .jp-progress { margin: 0 50px; }
+	.jp-audio .jp-type-playlist .jp-progress { left:166px; width:130px; }
+
+.jp-seek-bar {
+	width:0px;
+	height:100%;
+	cursor: pointer;
+	padding: 13px 0;
+}
+.jp-play-bar {
+	background: rgb(31, 137, 213);
+	width: 0px;
+	height: 8px;
+	margin-top: -13px;
+	position: relative;
+	z-index: 2;
+}
+	.jp-play-bar span {
+		position: absolute;
+		top: -4px;
+		right: -11px;
+		background: rgb(102, 102, 102);
+		border-radius: 20px;
+		width: 16px;
+		height: 16px;
+		z-index: 9;
+	}
+
+.jp-seeking-bg { background: url("jplayer.slim.seeking.gif"); }
+
+/* @group current time and duration */
+.jp-audio .jp-time-holder {}
+	.jp-audio .jp-type-single .jp-time-holder {	margin-top: -14px; }
+	.jp-audio .jp-type-playlist .jp-time-holder { left:166px; width:130px; }
+
+.jp-current-time,
+.jp-duration {
+	width:60px;
+}
+	.jp-current-time {
+		float: left;
+		display:inline;
+	}
+	.jp-duration {
+		float: right;
+		display:inline;
+		text-align: right;
+	}
+
+.jp-jplayer audio,
+.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
+/* @group TOGGLES */
+.jp-audio .jp-type-single ul.jp-toggles { width:25px; }
+	.jp-audio .jp-type-playlist ul.jp-toggles {
+		width:55px;
+		margin: 0;
+		position: absolute;
+		left: 325px;
+		top: 50px;
+	}
+
+/* @end */
+
+
+/* Blur image for chat window */
+.cht-blur-img {
+	margin: 20px 0; 
+	position: relative;
+} 
+.cht-blur-img .img-blur {
+	position: absolute;
+	z-index: 1;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: url(blur.svg#blur);
+}
+.cht-blur-img .top {
+	position: absolute;
+	width: 100px;
+	margin: auto;
+	vertical-align: middle;
+	z-index: 2;
+}
+
