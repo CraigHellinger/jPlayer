@@ -10,9 +10,11 @@ Changes so jPlayer (audio) works with zepto. Added  1 skin.
   just stub it as follows
 
   ```javascript
-      $.fn.stop = function() {
+      
+	  $.fn.stop = function() {
 			
-			    }```
+			    }
+  ```
 
 * We have changed initialization, so the whole player is initialized in the
   Zepto callback.
