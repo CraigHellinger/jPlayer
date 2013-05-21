@@ -5,6 +5,15 @@ http://www.jplayer.org/
 Changes so jPlayer (audio) works with zepto. Added  1 skin.
 ------------------------------------------------------------
 
+* Player requires zepto  with data and animation modules
+  There is one method missing on zepto animation module to get player to work
+  just stub it as follows
+
+  ```javascript
+      $.fn.stop = function() {
+			
+			    }```
+
 * We have changed initialization, so the whole player is initialized in the
   Zepto callback.
 
